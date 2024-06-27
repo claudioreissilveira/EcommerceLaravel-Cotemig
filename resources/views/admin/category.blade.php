@@ -73,6 +73,8 @@
                         <tr>
                             <th>Nome categoria</th>
 
+                            <th>Editar</th>
+
                             <th>Deletar</th>
                         </tr>
 
@@ -80,6 +82,9 @@
                         <tr>
                             <td>
                                 {{$data->category_name}}
+                            </td>
+                            <td>
+                                <a class="btn btn-success" href="{{url('edit_category', $data->id)}}">Editar</a>
                             </td>
                             <td>
                                 <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_category', $data->id)}}">Deletar</a>
